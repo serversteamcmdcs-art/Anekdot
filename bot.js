@@ -7,7 +7,7 @@ const https = require('https');
 const http = require('http');
 
 // URL сайта для посещения
-const TARGET_URL = 'https://telegram1.p7z.ru';
+const TARGET_URL = 'https://anekdot.p7z.ru';
 
 // Интервал в миллисекундах (1 минута = 60000 мс)
 const INTERVAL_MS = 60000;
@@ -90,3 +90,4 @@ process.on('SIGTERM', () => {
     clearInterval(intervalId);
     process.exit(0);
 });
+
