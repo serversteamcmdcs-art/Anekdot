@@ -1,20 +1,11 @@
-import path from 'path'
+const path = require('path');
+const express = require('express');
+const app = express();
 
-const http = require('http');
-const server = http.createServer((req, res) => {
-    const filePath = path.join(__dirname, 'index.html');
-    fs.readFile(filePath, (err, data) => {
-        if (err) {
-            res.statusCode = 500;
-            res.setHeader('Content-Type', 'text/plain');
-            res.end('Internal Server Error\n');
-            return;
-        }
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/html');
-        res.end(data);
-    });
+app.get('/', (req, res) => {
+    res.sendFile(`${__dirname}/index.html`);
 });
-server.listen(3000, () => {
-    console.log(`Server running at http://127.0.0.1:3000/`);
+
+app.listen(3333, () => {
+    console.log('Application listening on port 3333!');
 });
