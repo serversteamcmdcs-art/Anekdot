@@ -12,7 +12,7 @@
     "bot": "node bot.js",
     "bot1": "concurrently \"npm run start\" \"npm run bot\"",
     "build:client": "npx vite build --outDir dist",
-    "start": "node sever.js",
+    "start": "node sever.cjs",
     "desktop": "cd packages/desktop && npx electron .",
     "desktop:build": "cd packages/desktop && npx electron-builder --win portable",
     "desktop:install": "cd packages/desktop && npm install",
