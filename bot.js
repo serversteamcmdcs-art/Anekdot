@@ -5,6 +5,7 @@
 
 const https = require('https');
 const http = require('http');
+const path = require('path');
 
 // URL сайта для посещения
 const TARGET_URL = 'https://anekdot.p7z.ru';
@@ -46,7 +47,7 @@ function visitSite() {
         });
         
         res.on('end', () => {
-            console.log(`[${timestamp}] Получено данных: ${(dataSize / 1024).toFixed(2)} КБ`);
+            console.log(`[${timestamp}] port 3333 Получено данных: ${(dataSize / 1024).toFixed(2)} КБ`);
         });
     });
 
@@ -90,4 +91,5 @@ process.on('SIGTERM', () => {
     clearInterval(intervalId);
     process.exit(0);
 });
+
 
