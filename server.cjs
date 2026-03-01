@@ -1,5 +1,4 @@
 import path from 'path'
-import http from 'http'
 
 const http = require('http');
 const server = http.createServer((req, res) => {
