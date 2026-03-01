@@ -1,13 +1,8 @@
 {
-  "name": "teleai",
+  "name": "f",
   "version": "1.0.0",
   "private": true,
-  "description": "TeleAI — мессенджер в русском патриотическом стиле",
-  "workspaces": [
-    "packages/shared",
-    "packages/server",
-    "packages/client"
-  ],
+  "description": "f",
   "type": "module",
   "scripts": {
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
@@ -17,7 +12,7 @@
     "bot": "node bot.js",
     "bot1": "concurrently \"npm run start\" \"npm run bot\"",
     "build:client": "npx vite build --outDir dist",
-    "start": "npx tsx packages/server/src/index.ts",
+    "start": "node app.js",
     "desktop": "cd packages/desktop && npx electron .",
     "desktop:build": "cd packages/desktop && npx electron-builder --win portable",
     "desktop:install": "cd packages/desktop && npm install",
