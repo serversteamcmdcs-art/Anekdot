@@ -1,3 +1,5 @@
+import path from 'path'
+
 const http = require('http');
 const server = http.createServer((req, res) => {
     const filePath = path.join(__dirname, 'index.html');
